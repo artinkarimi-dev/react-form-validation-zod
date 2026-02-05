@@ -17,7 +17,7 @@
 
 **Secure Form Validation Engine** is a precision-engineered frontend implementation that prioritizes **data integrity** and **user feedback**.
 
-This project serves as a technical showcase for integrating **Zod** as a "Single Source of Truth" for validation logic, decoupled from the UI layer. It orchestrates a seamless user experience by combining real-time schema parsing with immediate visual feedback loops using `react-hot-toast` and `sweetalert`.
+This project serves as a technical showcase for integrating **Zod** as a "Single Source of Truth" for validation logic, decoupled from the UI layer. It orchestrates a seamless user experience by combining real-time schema parsing with immediate visual feedback loops using `react-hot-toast` and `sweetalert2`.
 
 > The core philosophy here is **Defensive Programming**: ensuring that no malformed data ever leaves the client-side, wrapped in a polished, glassmorphism-style UI.
 
@@ -27,7 +27,7 @@ This project serves as a technical showcase for integrating **Zod** as a "Single
 
 - **Schema-First Validation:** All validation logic is centralized in a Zod schema (`loginSchema`), enforcing strict typing and Regex policies.
 - **Asynchronous Feedback Loops:** Sophisticated handling of "Loading," "Error," and "Success" states using `react-hot-toast`.
-- **Modal Interactions:** Clean, native-feeling success prompts powered by `sweetalert`.
+- **Modal Interactions:** Clean, native-feeling success prompts powered by **`sweetalert2`**.
 - **Modern UI Architecture:** Fully responsive Glassmorphism design using Tailwind CSS v4 utility classes.
 - **Accessibility Focus:** Unique ID generation via React's `useId` hook to prevent label collisions.
 
@@ -41,7 +41,7 @@ This project serves as a technical showcase for integrating **Zod** as a "Single
 | **Validation**    | Zod v4 (Schema & Type Safety)      |
 | **Styling**       | Tailwind CSS v4 (PostCSS)          |
 | **Notifications** | React Hot Toast (Toast UX)         |
-| **Alerts**        | SweetAlert (Modal UX)              |
+| **Alerts**        | **SweetAlert2** (Modal UX)         |
 | **Build Tool**    | Vite v7                            |
 
 ### ðŸ’¡ Technical Highlights
@@ -78,7 +78,7 @@ This repository demonstrates practical mastery over the modern React ecosystemâ€
 
 - **Zod Implementation:** Moving beyond simple `if/else` checks to a declarative, schema-based validation architecture.
 - **UX Engineering:** Orchestrating `react-hot-toast` to provide non-blocking, immediate feedback to users.
-- **Third-Party Integration:** Seamlessly implementing `sweetalert` for critical user alerts.
+- **Third-Party Integration:** Seamlessly implementing `sweetalert2` for critical user alerts.
 - **React 19 Best Practices:** Utilizing strict mode and modern hooks for a clean, memory-leak-free codebase.
 
 <br />
