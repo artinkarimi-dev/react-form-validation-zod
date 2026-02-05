@@ -1,6 +1,6 @@
 import React, { useId, useState } from "react";
 import toast from "react-hot-toast";
-import swal from "sweetalert";
+import swal from "sweetalert2";
 import loginSchema from "../../Validators/loginValidators";
 
 function FormRegister() {
@@ -8,22 +8,19 @@ function FormRegister() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const id = useId(); // Prevent label/input id collisions
+  const id = useId();
 
   const commandMessage = (e) => {
     e.preventDefault();
 
     const newUser = { username, email, password };
 
-    // Zod is the single source of validation truth
     const result = loginSchema.safeParse(newUser);
 
-    // Clear any previous toasts before starting a new flow
     toast.dismiss();
     toast.loading("Under review...");
 
     setTimeout(() => {
-      // Always clean loading state before showing result
       toast.dismiss();
 
       if (!result.success) {
@@ -31,10 +28,13 @@ function FormRegister() {
         return;
       }
 
-      swal({
+      swal.fire({
         title: "You have successfully registered",
         icon: "success",
-        className: "glass-swal",
+        customClass: {
+          container: "glass-swal-container",
+          popup: "glass-swal-popup",
+        },
         timer: 2000,
       });
     }, 1500);
