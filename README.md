@@ -62,6 +62,7 @@ git clone https://github.com/artinkarimi-dev/react-form-validation-zod.git
 
 ### 2. Install Dependencies
 ```bash
+cd react-form-validation-zod
 npm install
 ```
 
